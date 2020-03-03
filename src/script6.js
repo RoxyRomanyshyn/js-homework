@@ -10,6 +10,6 @@ do {
   } else {
     total += Number(message);
   }
-} while (message != null);
+} while (message !== null);
 
-alert(`Сума дорівнює ${total + message}`);
+alert(`Сума дорівнює ${total}`);

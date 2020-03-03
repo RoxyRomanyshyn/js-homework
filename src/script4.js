@@ -1,11 +1,11 @@
 'use strict';
 
-let droidsToBuy = prompt('Какое количество дроидов Вы хотите купить?', '');
+let droidsToBuy = prompt('Какое количество дроидов Вы хотите купить?');
 
 const credits = 23580;
 const pricePerDroid = 3000;
 
-let totalPrice = (pricePerDroid * droidsToBuy);
+let totalPrice = pricePerDroid * Number(droidsToBuy);
 
 if (droidsToBuy == null) {
     console.log('Отменено пользователем!');

@@ -2,7 +2,7 @@
 
 const total = 100;
 
-let order = prompt('Вкажіть кількість', '');
+let order = prompt('Вкажіть кількість:');
 
 if (total >= order) {
     alert('Заказ оформлен, с вами свяжется менеджер');
