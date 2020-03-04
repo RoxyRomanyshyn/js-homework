@@ -1,12 +1,11 @@
 'use strict';
 
-let delivery = prompt(`В какую страну Вы хотите оформить доставку?`);
+let delivery = prompt(`В какую страну Вы хотите оформить доставку?`).toLowerCase();
 let cost;
 
 if (delivery === null) {
     console.log('Отменено пользователем');
 } else {
-    delivery == delivery.toLowerCase();
     switch (delivery) {
         case 'китай':
             cost = 100;
