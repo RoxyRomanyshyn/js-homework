@@ -7,7 +7,7 @@ const pricePerDroid = 3000;
 
 let totalPrice = pricePerDroid * Number(droidsToBuy);
 
-if (droidsToBuy == null) {
+if (droidsToBuy === null) {
     console.log('Отменено пользователем!');
 } else if (totalPrice > credits) {
     console.log('Недостаточно средств на счету!');
