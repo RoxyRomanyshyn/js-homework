@@ -1,11 +1,10 @@
 const checkForSpam = function (message) {
-    const words = message.split(' ');
-    for (const word of words) {
-        if (word.toLoverCase === 'sale' || word.toLoverCase === 'SPAM') {
-            return true;
-        }
-        return false;
+    message = message.toLowerCase();
+
+    if (message.includes('sale') || message.includes('spam')) {
+        return true;
     }
+    return false;
 };
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
