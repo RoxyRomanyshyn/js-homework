@@ -8,6 +8,9 @@ do {
 } while (input !== null);
 
 for (const number of numbers) {
-  total += number;
-}
+  if (numbers.length !== 0) {
+    total += number;
+  }
+};
+
 console.log(total);
