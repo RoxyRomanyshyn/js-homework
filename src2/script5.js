@@ -18,13 +18,12 @@ const products = [
 // };
 const calculateTotalPrice = function(products, productName) {
   let total = 0;
-  let productsPrice = products.price;
-  let productsQuantity = products.quantity;
+
   for (let i = 0; i < products.length; i += 1) {
-    if (products[i] === productName) {
-      total += productsPrice * productsQuantity;
+    if (products[i].name === productName) {
+      total = products[i].price * products[i].quantity;
+      return total;
     }
-    return total;
   }
 };
 
