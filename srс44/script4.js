@@ -1,16 +1,13 @@
 class Car {
     constructor({
-        speed = 0,
         price,
         maxSpeed,
-        isOn = false,
-        distance = 0
     }) {
-        this.speed = speed;
+        this.speed = 0;
         this._price = price;
         this.maxSpeed = maxSpeed;
-        this.isOn = isOn;
-        this.distance = distance;
+        this.isOn = false;
+        this.distance = 0;
     }
     get price() {
         return this._price;
@@ -44,7 +41,11 @@ class Car {
         }
     }
     drive(hours) {
-        this.distance += (hours * this.speed);
+        if (this.isOn = true) {
+            this.distance += (hours * this.speed);
+        } else {
+            this.distance = 0;
+        }
     }
 
     static getSpecs(car) {
