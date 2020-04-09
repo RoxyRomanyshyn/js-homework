@@ -1,7 +1,7 @@
 import users from './users.js';
 
 const getUserWithEmail = (users, email) => {
-    return users.filter(user => email === user.email)
+    return users.find(user => email === user.email)
 };
 
 console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
