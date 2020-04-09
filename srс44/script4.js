@@ -1,59 +1,57 @@
 class Car {
-    constructor({
-        price,
-        maxSpeed,
-    }) {
-        this.speed = 0;
-        this._price = price;
-        this.maxSpeed = maxSpeed;
-        this.isOn = false;
-        this.distance = 0;
-    }
-    get price() {
-        return this._price;
-    }
-    set price(val) {
-        this._price = val;
-    }
+  constructor({ price, maxSpeed }) {
+    this.speed = 0;
+    this._price = price;
+    this.maxSpeed = maxSpeed;
+    this.isOn = false;
+    this.distance = 0;
+  }
+  get price() {
+    return this._price;
+  }
+  set price(val) {
+    this._price = val;
+  }
 
-    turnOn() {
-        this.isOn = true;
-    }
+  turnOn() {
+    this.isOn = true;
+  }
 
-    turnOff() {
-        this.isOn = false;
-        this.speed = 0;
-    }
+  turnOff() {
+    this.isOn = false;
+    this.speed = 0;
+  }
 
-    accelerate(value) {
-        if (this.speed + value > this.maxSpeed) {
-            this.speed = this.maxSpeed;
-        } else {
-            this.speed += value;
-        }
+  accelerate(value) {
+    if (this.speed + value > this.maxSpeed) {
+      this.speed = this.maxSpeed;
+    } else {
+      this.speed += value;
     }
+  }
 
-    decelerate(value) {
-        if (this.speed - value < 0) {
-            this.speed = 0;
-        } else {
-            this.speed -= value;
-        }
+  decelerate(value) {
+    if (this.speed - value < 0) {
+      this.speed = 0;
+    } else {
+      this.speed -= value;
     }
-    drive(hours) {
-        if (this.isOn = true) {
-            this.distance += (hours * this.speed);
-        }
+  }
+  drive(hours) {
+    if (this.turnOn) {
+      this.distance += hours * this.speed;
     }
+  }
 
-    static getSpecs(car) {
-        console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`)
-
-    }
+  static getSpecs(car) {
+    console.log(
+      `maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`,
+    );
+  }
 }
 const mustang = new Car({
-    maxSpeed: 200,
-    price: 2000
+  maxSpeed: 200,
+  price: 2000,
 });
 
 mustang.turnOn();
