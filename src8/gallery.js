@@ -31,9 +31,13 @@ addGall();
 gallery.addEventListener('click', onClick);
 
 function onClick(e) {
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
   e.preventDefault();
   model.classList.add('is-open');
   image.src = e.target.dataset.source;
+  document.addEventListener('keydown', esc);
 }
 button.addEventListener('click', closeClick);
 
@@ -43,9 +47,8 @@ function closeClick(e) {
   }
   model.classList.remove('is-open');
   image.src = '';
+  document.removeEventListener('keydown', esc);
 }
-
-document.addEventListener('keydown', esc);
 
 function esc(e) {
   if (e.keyCode === 27) {
