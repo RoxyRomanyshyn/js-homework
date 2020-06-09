@@ -14,14 +14,14 @@ const images = [{
   },
 ];
 
-
 const li = document.createElement('li');
 
 li.setAttribute('class', images);
 
-
-const markup = images.reduce((string, image) => string + `<li>${image.url}</li>`, '');
+const markup = images.reduce(
+  (string, image) => string + `<li><img src=${image.url} height="150px"></li>`,
+  '',
+);
 gallery.insertAdjacentHTML('beforeend', markup);
-
 
 console.log(markup);

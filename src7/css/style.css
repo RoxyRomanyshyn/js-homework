@@ -9,3 +9,14 @@
 #validation-input.invalid {
     border-color: #f44336;
 }
+
+#gallery {
+    list-style: none;
+    display: flex;
+
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+}
